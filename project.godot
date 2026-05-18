@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Yandere Sim Recreation"
+config/name="Vandere"
+config/description="jaja"
 run/main_scene="uid://cpuv7i3kd66uj"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"

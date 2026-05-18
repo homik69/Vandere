@@ -1,9 +1,9 @@
 @tool
 extends EditorPlugin
 
-@export var duration_seconds:float = 5
+@export var duration_seconds:float = 10
 @export var transition_seconds:float = 1
-@export var transition_distance:float = 540
+@export var transition_distance:float = 60
 
 var export_stripper:EditorExportPlugin = YouCanDoItExportStripper.new()
 var overlay_dock:Control = (load(addon_path.path_join("Scenes/OverlayDock.tscn")) as PackedScene).instantiate()
