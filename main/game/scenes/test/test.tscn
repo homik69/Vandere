@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cpuv7i3kd66uj"]
+
+[ext_resource type="PackedScene" uid="uid://d0ckyfipotjxy" path="res://main/game/scenes/player/player.tscn" id="1_24ese"]
+[ext_resource type="Shader" uid="uid://l4u0lavawxtk" path="res://main/game/scenes/test/skai.gdshader" id="2_dg67u"]
+[ext_resource type="PackedScene" uid="uid://ba5yqm14e80mx" path="res://godette_plush/godette_plush.tscn" id="3_knyqu"]
+[ext_resource type="PackedScene" uid="uid://fohmeogugrb" path="res://main/resources/models/gman/gman.glb" id="4_hkff6"]
+[ext_resource type="Script" uid="uid://c5vodqtbovxji" path="res://main/game/scripts/components/combat/enemy.gd" id="4_ngo55"]
+[ext_resource type="Script" uid="uid://c6dnyc6lxxwre" path="res://main/game/scripts/components/combat/health_component.gd" id="6_dd6ky"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uo5iw"]
+noise_type = 4
+frequency = 0.0172
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hkff6"]
+width = 128
+noise = SubResource("FastNoiseLite_uo5iw")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_knyqu"]
+shader = ExtResource("2_dg67u")
+shader_parameter/sky_texture = SubResource("NoiseTexture2D_hkff6")
+shader_parameter/power = 0.295
+shader_parameter/scale_a = 0.505
+shader_parameter/scale_b = 0.655
+shader_parameter/speed = 0.355
+shader_parameter/speed_a = Vector2(0.1, 0.1)
+shader_parameter/speed_b = Vector2(0.1, 0.1)
+shader_parameter/density = 0.70000003325
+shader_parameter/grayness = 0.4150000197125
+shader_parameter/cloud_light = 1.0
+shader_parameter/cloud_distortion = -0.325
+shader_parameter/sky_color_a0 = Color(0.5, 0.8, 1, 1)
+shader_parameter/sky_color_b0 = Color(0.3, 0.5, 1, 1)
+shader_parameter/sky_color_a1 = Color(0.125, 0.2, 0.25, 1)
+shader_parameter/sky_color_b1 = Color(0.075, 0.125, 0.25, 1)
+shader_parameter/ground_color_a0 = Color(0.8352507, 0.9359942, 0.98575085, 1)
+shader_parameter/ground_color_b0 = Color(1, 0.5, 0.3, 1)
+shader_parameter/ground_color_a1 = Color(0.25, 0.2, 0.125, 1)
+shader_parameter/ground_color_b1 = Color(0.25, 0.125, 0.075, 1)
+shader_parameter/sun_color_a = Color(1, 0.98, 0.025, 1)
+shader_parameter/sun_color_b = Color(1, 0.5, 0, 1)
+shader_parameter/sun_size = 0.985
+shader_parameter/sun_softness = 0.002
+shader_parameter/sunset_range = Vector2(-0.1, 0.3)
+
+[sub_resource type="Sky" id="Sky_24ese"]
+sky_material = SubResource("ShaderMaterial_knyqu")
+
+[sub_resource type="Environment" id="Environment_sshlj"]
+background_mode = 2
+sky = SubResource("Sky_24ese")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sshlj"]
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sshlj"]
+size = Vector3(0.2842865, 1.3936462, 0.24633789)
+
+[node name="test" type="Node3D" unique_id=430893227]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=320874242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5095806, -0.006439209, -13.801483)
+use_collision = true
+collision_layer = 15
+collision_mask = 8
+size = Vector3(24.593037, 0.018981934, 39.875183)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=491380138]
+transform = Transform3D(1, 0, 0, 0, -0.7254225, 0.6883038, 0, -0.6883038, -0.7254225, 0, 0, 0)
+
+[node name="Ayano" parent="." unique_id=1981217249 instance=ExtResource("1_24ese")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045478284, 0.0030517578, 1.0288831)
+collision_mask = 9
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1647296991]
+environment = SubResource("Environment_sshlj")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=2056621450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050689697, 0.42535925, -12.550039)
+use_collision = true
+collision_layer = 15
+collision_mask = 8
+size = Vector3(2.4667358, 0.89697266, 1.6679688)
+
+[node name="GodettePlush" parent="." unique_id=1521205680 instance=ExtResource("3_knyqu")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.04721737, 0.87610346, -12.544806)
+collision_layer = 2
+collision_mask = 9
+
+[node name="Gman" type="RigidBody3D" parent="." unique_id=1763953272 node_paths=PackedStringArray("health_component")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2050796, 0.48600227, -7.9038887)
+collision_layer = 2
+collision_mask = 13
+physics_material_override = SubResource("PhysicsMaterial_sshlj")
+script = ExtResource("4_ngo55")
+health_component = NodePath("hp")
+
+[node name="gman" parent="Gman" unique_id=1328451685 instance=ExtResource("4_hkff6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gman" unique_id=1320227161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011825562, 0.7156524, 0.009155273)
+shape = SubResource("BoxShape3D_sshlj")
+
+[node name="hp" type="Node" parent="Gman" unique_id=1145423832]
+script = ExtResource("6_dd6ky")
+max_health = -9223372036854775808

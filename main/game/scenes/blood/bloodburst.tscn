@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cwg18barvw2em"]
+
+[ext_resource type="Script" uid="uid://bpruiykfsyb6w" path="res://main/game/scripts/blood/bloodburst.gd" id="1_5vc00"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7dpca"]
+initial_velocity_min = -10.8
+initial_velocity_max = 8.05
+collision_mode = 1
+collision_friction = 0.55
+collision_bounce = 0.75
+
+[sub_resource type="TextMesh" id="TextMesh_4jlpc"]
+text = "nigger"
+font_size = 63
+uppercase = true
+
+[node name="BloodBurst" type="GPUParticles3D" unique_id=2126147230]
+emitting = false
+amount = 53
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_7dpca")
+draw_pass_1 = SubResource("TextMesh_4jlpc")
+script = ExtResource("1_5vc00")

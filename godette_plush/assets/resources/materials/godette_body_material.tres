@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dypy06bbrinfr"]
+
+[ext_resource type="Texture2D" uid="uid://c21pqv0ieimsr" path="res://addons/godette_plush/assets/models/godette_plush_godette_body Color.png" id="1_7slkq"]
+[ext_resource type="Texture2D" uid="uid://0pe1n2o7iion" path="res://addons/godette_plush/assets/models/godette_plush_godette_body Normal.png" id="2_fpbm2"]
+
+[resource]
+albedo_texture = ExtResource("1_7slkq")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_fpbm2")
