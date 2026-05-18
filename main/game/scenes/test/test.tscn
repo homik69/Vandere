@@ -51,7 +51,8 @@ background_mode = 2
 sky = SubResource("Sky_24ese")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sshlj"]
-bounce = 1.0
+friction = 4.5
+bounce = 2.65
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sshlj"]
 size = Vector3(0.2842865, 1.3936462, 0.24633789)
@@ -103,4 +104,4 @@ shape = SubResource("BoxShape3D_sshlj")
 
 [node name="hp" type="Node" parent="Gman" unique_id=1145423832]
 script = ExtResource("6_dd6ky")
-max_health = -9223372036854775808
+max_health = 0

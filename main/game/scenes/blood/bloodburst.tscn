@@ -9,16 +9,23 @@ collision_mode = 1
 collision_friction = 0.55
 collision_bounce = 0.75
 
-[sub_resource type="TextMesh" id="TextMesh_4jlpc"]
-text = "nigger"
-font_size = 63
-uppercase = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5ltn"]
+albedo_color = Color(0.733002, 2.7554854e-06, 6.738305e-07, 1)
+emission_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_213hr"]
+material = SubResource("StandardMaterial3D_v5ltn")
+radius = 0.05
+height = 0.1
+radial_segments = 8
+rings = 4
 
 [node name="BloodBurst" type="GPUParticles3D" unique_id=2126147230]
 emitting = false
 amount = 53
 one_shot = true
 explosiveness = 1.0
+trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_7dpca")
-draw_pass_1 = SubResource("TextMesh_4jlpc")
+draw_pass_1 = SubResource("SphereMesh_213hr")
 script = ExtResource("1_5vc00")
