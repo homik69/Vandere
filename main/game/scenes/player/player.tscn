@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://doa1tv5aptrq" path="res://main/resources/models/ayano/ayano.tscn" id="2_x8l3k"]
 [ext_resource type="Shader" uid="uid://esmwuqmqq0c2" path="res://main/game/shaders/crosshair.gdshader" id="3_x8l3k"]
 [ext_resource type="PackedScene" uid="uid://cwg18barvw2em" path="res://main/game/scenes/blood/bloodburst.tscn" id="3_xcxpm"]
+[ext_resource type="Shader" uid="uid://bwbgi28ieacmw" path="res://main/game/shaders/radial.gdshader" id="6_sfev3"]
+[ext_resource type="Script" uid="uid://bb04opkkfvq11" path="res://main/game/scripts/components/emote/emote_menu.gd" id="6_xcxpm"]
+[ext_resource type="Script" uid="uid://c6dnyc6lxxwre" path="res://main/game/scripts/components/combat/health_component.gd" id="8_6p76l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sshlj"]
 radius = 0.21582031
@@ -463,21 +466,21 @@ tracks/3/type = "rotation_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 2")
-tracks/3/interp = 1
+tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.666336, 0.255443, 0.262824, 0.64936)
 tracks/4/type = "rotation_3d"
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 1")
-tracks/4/interp = 1
+tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.579844, 0.48194, 0.378217, 0.537092)
 tracks/5/type = "rotation_3d"
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right elbow")
-tracks/5/interp = 1
+tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.151258, 0.067259, 0.331237, 0.928913)
 tracks/6/type = "rotation_3d"
@@ -575,7 +578,7 @@ tracks/19/type = "rotation_3d"
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:head neck upper")
-tracks/19/interp = 1
+tracks/19/interp = 2
 tracks/19/loop_wrap = true
 tracks/19/keys = PackedFloat32Array(0, 1, -0.10877396, -5.1180683e-05, -3.8722304e-05, 0.99406654)
 tracks/20/type = "rotation_3d"
@@ -610,56 +613,56 @@ tracks/24/type = "rotation_3d"
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2a")
-tracks/24/interp = 1
+tracks/24/interp = 2
 tracks/24/loop_wrap = true
 tracks/24/keys = PackedFloat32Array(0, 1, -0.38519597, 0.044979997, 0.044045996, 0.920685)
 tracks/25/type = "rotation_3d"
 tracks/25/imported = false
 tracks/25/enabled = true
 tracks/25/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2b")
-tracks/25/interp = 1
+tracks/25/interp = 2
 tracks/25/loop_wrap = true
 tracks/25/keys = PackedFloat32Array(0, 1, -0.47712788, 0.005412997, 0.009969996, 0.8787607)
 tracks/26/type = "rotation_3d"
 tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2c")
-tracks/26/interp = 1
+tracks/26/interp = 2
 tracks/26/loop_wrap = true
 tracks/26/keys = PackedFloat32Array(0, 1, -0.5749753, 0.0074290032, 0.005944002, 0.81811535)
 tracks/27/type = "rotation_3d"
 tracks/27/imported = false
 tracks/27/enabled = true
 tracks/27/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3a")
-tracks/27/interp = 1
+tracks/27/interp = 2
 tracks/27/loop_wrap = true
 tracks/27/keys = PackedFloat32Array(0, 1, -0.38199997, 0.060533002, 0.067103, 0.9197331)
 tracks/28/type = "rotation_3d"
 tracks/28/imported = false
 tracks/28/enabled = true
 tracks/28/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3b")
-tracks/28/interp = 1
+tracks/28/interp = 2
 tracks/28/loop_wrap = true
 tracks/28/keys = PackedFloat32Array(0, 1, -0.52249813, 0.00045600007, 0.00074400014, 0.8526401)
 tracks/29/type = "rotation_3d"
 tracks/29/imported = false
 tracks/29/enabled = true
 tracks/29/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3c")
-tracks/29/interp = 1
+tracks/29/interp = 2
 tracks/29/loop_wrap = true
 tracks/29/keys = PackedFloat32Array(0, 1, -0.6113069, -0.016886, -0.018609995, 0.79099464)
 tracks/30/type = "rotation_3d"
 tracks/30/imported = false
 tracks/30/enabled = true
 tracks/30/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5a")
-tracks/30/interp = 1
+tracks/30/interp = 2
 tracks/30/loop_wrap = true
 tracks/30/keys = PackedFloat32Array(0, 1, -0.3637731, 0.08679701, 0.10189702, 0.9218202)
 tracks/31/type = "rotation_3d"
 tracks/31/imported = false
 tracks/31/enabled = true
 tracks/31/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5b")
-tracks/31/interp = 1
+tracks/31/interp = 2
 tracks/31/loop_wrap = true
 tracks/31/keys = PackedFloat32Array(0, 1, -0.50206214, -0.019668005, -0.014923004, 0.8644791)
 tracks/32/type = "rotation_3d"
@@ -999,7 +1002,7 @@ tracks/23/enabled = true
 tracks/23/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:root ground")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
-tracks/23/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/23/keys = PackedFloat32Array(0, 1, 0, 0.05, 0)
 tracks/24/type = "rotation_3d"
 tracks/24/imported = false
 tracks/24/enabled = true
@@ -2047,48 +2050,298 @@ tracks/0/type = "rotation_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:head neck upper")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0.160743, 0, 0, 0.986996)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 2")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, -0.4824, 0.44314, 0.31029, 0.688939)
 tracks/2/type = "rotation_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right elbow")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, 0.87477, -0.221284, -0.214726, -0.37377)
 tracks/3/type = "rotation_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 2")
-tracks/3/interp = 1
+tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, -0.329008, 0.011265, -0.243571, 0.912305)
 tracks/4/type = "rotation_3d"
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left elbow")
-tracks/4/interp = 1
+tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.579845, -0.202978, -0.743299, 0.264739)
 tracks/5/type = "rotation_3d"
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 1")
-tracks/5/interp = 1
+tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, 0.503616, 0.503826, 0.498758, -0.493732)
 
+[sub_resource type="Animation" id="Animation_6daie"]
+resource_name = "wave"
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:head neck upper")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.10877396, -5.1180683e-05, -3.8722304e-05, 0.99406654)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 2")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.152387, 0.590758, 0.114832, 0.783962)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right elbow")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.03301, 0.008416, 0.901815, 0.430777, 0.5, 1, -0.033388, -0.00676, 0.625115, 0.779789)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 2")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.329008, 0.011265, -0.243571, 0.912305)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left elbow")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.68735, -0.175691, -0.63255, 0.310745)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 1")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.503616, 0.503826, 0.498758, -0.493732)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right wrist")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.020738158, 0.020735646, 0.051750742, 0.9982294, 0.10000001, 1, -0.018726, 0.022971, 0.143, 0.989279, 0.6, 1, -0.023381, 0.018211, -0.081466, 0.996235)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.03868919, -0.04059583, -0.05297735, 0.9970198)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3b")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0002134033, 0.00017253954, -0.0010662774, 0.9999994)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3c")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.029797826, 0.029165855, -0.013220207, 0.99904287)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5a")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0.05245001, -0.054520357, -0.083546445, 0.99362797)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5b")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, -0.020051006, 0.01922777, 0.0065898844, 0.99959236)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5c")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, -0.015224261, 0.015893972, 0.05533876, 0.9982251)
+tracks/13/type = "rotation_3d"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0.036813226, -0.038137063, -0.06158579, 0.9966933)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, -0.0112673445, 0.010941032, -0.0031923414, 0.99987155)
+tracks/15/type = "rotation_3d"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4c")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, -0.03483442, 0.03425785, 0.028892204, 0.9983878)
+tracks/16/type = "rotation_3d"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1a")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.30340844, 0.32994437, 0.15140866, 0.8809968)
+tracks/17/type = "rotation_3d"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1b")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0.021303207, -0.03996441, 0.005969071, 0.99895614)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1c")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, -0.064664386, 0.084032595, 0.0225827, 0.9941062)
+tracks/19/type = "rotation_3d"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2a")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, -0.385196, 0.04498, 0.044045996, 0.92068505)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2b")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, -0.4771279, 0.0054129967, 0.009969996, 0.8787607)
+tracks/21/type = "rotation_3d"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2c")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -0.5749754, 0.0074290032, 0.0059440024, 0.8181155)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3a")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.38199994, 0.060533002, 0.067103, 0.91973317)
+tracks/23/type = "rotation_3d"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3b")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, -0.52249813, 0.00045600007, 0.0007440001, 0.85264003)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3c")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -0.61130697, -0.016885998, -0.018609995, 0.7909945)
+tracks/25/type = "rotation_3d"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5a")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, -0.3637731, 0.08679701, 0.10189702, 0.9218202)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5b")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, -0.50206214, -0.019668005, -0.014923005, 0.86447906)
+tracks/27/type = "rotation_3d"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5c")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, -0.50979906, -0.006785, -0.0015850004, 0.86026525)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 4a")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, -0.44737595, 0.064037986, 0.07405998, 0.8889708)
+tracks/29/type = "rotation_3d"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 4b")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, -0.509042, -0.0072370013, -0.0023259993, 0.8607081)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 4c")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, -0.4769383, 0.02166901, 0.015009007, 0.8785414)
+tracks/31/type = "rotation_3d"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1a")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, -0.30586687, -0.29087898, -0.13712893, 0.8961197)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1b")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 0.18189001, 0.039555002, -0.012299003, 0.9824461)
+tracks/33/type = "rotation_3d"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1c")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 0.24118903, -0.28490016, 0.061843015, 0.925654)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left wrist")
+tracks/34/interp = 2
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, -0.020765608, -0.02076559, -0.05174022, 0.9982287, 0.23333335, 1, -0.15087, -0.027637, -0.053904, 0.986696)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6daie"]
 _data = {
-&"blush": SubResource("Animation_6x14p")
+&"blush": SubResource("Animation_6x14p"),
+&"wave": SubResource("Animation_6daie")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sfev3"]
@@ -2097,6 +2350,29 @@ animation = &"Combat/aim"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_g0bm5"]
 filter_enabled = true
 filters = ["Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right elbow", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 1", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xcxpm"]
+animation = &"UpperBody/blush"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6p76l"]
+animation = &"UpperBody/wave"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6x14p"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_6x14p"]
+min_space = 0.0
+max_space = 3.0
+snap = 1.0
+blend_point_0/node = SubResource("AnimationNodeAnimation_xcxpm")
+blend_point_0/pos = 1.0
+blend_point_0/name = &"UpperBody_blush"
+blend_point_1/node = SubResource("AnimationNodeAnimation_6p76l")
+blend_point_1/pos = 2.0
+blend_point_1/name = &"RESET"
+blend_point_2/node = SubResource("AnimationNodeAnimation_6x14p")
+blend_point_2/pos = 3.0
+blend_point_2/name = &"Combat_aim"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x8l3k"]
 animation = &"Movement/idle"
@@ -2122,23 +2398,20 @@ blend_point_2/name = &"run"
 filter_enabled = true
 filters = ["Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left elbow", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 1c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 2c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 3c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 4a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 4b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left finger 5c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 1", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left shoulder 2", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm left wrist", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right elbow", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 1c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 2c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 3c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 4c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5a", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5b", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right finger 5c", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 1", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right shoulder 2", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:arm right wrist", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:head neck lower", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:head neck upper", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:spine middle 2", "Visuals/ayano/Ayano/Ayano_arm/Skeleton3D:spine upper"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xcxpm"]
-animation = &"UpperBody/blush"
-
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_sshlj"]
-graph_offset = Vector2(-959.49585, 160.66803)
+graph_offset = Vector2(-908.13196, 234.24838)
 nodes/output/position = Vector2(120, 600)
 nodes/UpperBodyLayer/node = SubResource("AnimationNodeBlend2_ydg6q")
 nodes/UpperBodyLayer/position = Vector2(-240, 720)
 nodes/Movement/node = SubResource("AnimationNodeBlendSpace1D_xcxpm")
 nodes/Movement/position = Vector2(-820, 300)
-nodes/blush/node = SubResource("AnimationNodeAnimation_xcxpm")
-nodes/blush/position = Vector2(-820, 700)
-nodes/Aim/node = SubResource("AnimationNodeAnimation_sfev3")
-nodes/Aim/position = Vector2(-760, 540)
 nodes/AimFilter/node = SubResource("AnimationNodeBlend2_g0bm5")
 nodes/AimFilter/position = Vector2(-460, 540)
-node_connections = [&"output", 0, &"UpperBodyLayer", &"UpperBodyLayer", 0, &"AimFilter", &"UpperBodyLayer", 1, &"blush", &"AimFilter", 0, &"Movement", &"AimFilter", 1, &"Aim"]
+nodes/Aim/node = SubResource("AnimationNodeAnimation_sfev3")
+nodes/Aim/position = Vector2(-760, 540)
+nodes/EmoteBlendSpace/node = SubResource("AnimationNodeBlendSpace1D_6x14p")
+nodes/EmoteBlendSpace/position = Vector2(-720, 760)
+node_connections = [&"output", 0, &"UpperBodyLayer", &"UpperBodyLayer", 0, &"AimFilter", &"UpperBodyLayer", 1, &"EmoteBlendSpace", &"AimFilter", 0, &"Movement", &"AimFilter", 1, &"Aim"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sshlj"]
 shader = ExtResource("3_x8l3k")
@@ -2151,6 +2424,16 @@ shader_parameter/shape_sides = 6.0
 shader_parameter/radius_rectangle = 0.14
 shader_parameter/rectangle_size_x = 1.3
 shader_parameter/rectangle_scale = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xcxpm"]
+shader = ExtResource("6_sfev3")
+shader_parameter/base_color = Color(0.1, 0.1, 0.1, 0.5)
+shader_parameter/select_color = Color(0.5590632, 0.26263535, 0.7810585, 0.7019608)
+shader_parameter/inner_radius = 0.25
+shader_parameter/outer_radius = 0.5
+shader_parameter/segment_count = 4
+shader_parameter/float_angle = 0.0
+shader_parameter/selection_strength = 0.0
 
 [node name="Ayano" type="CharacterBody3D" unique_id=1981217249 node_paths=PackedStringArray("yaw_pivot", "pitch_pivot", "visual_model", "spring_arm", "camera", "weapon_barrel", "animation_tree")]
 script = ExtResource("1_ydg6q")
@@ -2217,68 +2500,68 @@ bones/215/rotation = Quaternion(0.13885109, -0.04046902, 0.010766006, 0.98942757
 bones/216/rotation = Quaternion(0.47212985, 0.06474899, -0.023796994, 0.8788257)
 
 [node name="HBack3" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="2" unique_id=1764031419]
-transform = Transform3D(-1.1862023, -6.779503e-05, -7.119584e-05, 7.152541e-05, -1.1844859, -0.06378611, -6.744728e-05, -0.06378612, 1.1844858, -5.7500143e-05, 0.5743689, 0.13491544)
+transform = Transform3D(-1.1862023, -6.625325e-05, -7.068423e-05, 7.030395e-05, -1.1841398, -0.06990974, -6.6656714e-05, -0.06990974, 1.1841398, -5.4899952e-05, 0.6184858, 0.13493584)
 damping = 4.0
 use_gravity = false
 
 [node name="HBack4" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="3" unique_id=1164311112]
-transform = Transform3D(-1.1862023, -2.3098104e-07, -1.1053911e-07, 2.407033e-07, -1.1804905, -0.11626466, -8.7367454e-08, -0.11626469, 1.1804903, -5.933579e-06, 0.46858013, 0.18591842)
+transform = Transform3D(-1.1862023, 5.389058e-07, 5.2329955e-07, -5.8902657e-07, -1.1801301, -0.11986465, 4.6616526e-07, -0.11986466, 1.18013, -5.7207562e-06, 0.5132154, 0.1822636)
 
 [node name="HBack2" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="4" unique_id=998469397]
-transform = Transform3D(-1.1862023, 2.0868077e-08, 1.0206414e-07, -1.11096635e-11, -1.1621844, 0.23749162, 1.0417569e-07, 0.2374916, 1.1621845, 3.240372e-08, 0.6870813, 0.36921957)
+transform = Transform3D(-1.1862023, 1.9549944e-08, 1.0232502e-07, -1.17242336e-11, -1.1651521, 0.222475, 1.0417589e-07, 0.22247498, 1.1651523, 3.1799935e-08, 0.7277603, 0.3623479)
 damping = 4.0
 use_gravity = false
 
 [node name="HBack1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="5" unique_id=822778424]
-transform = Transform3D(-1.1862023, 8.6346624e-08, 5.8131675e-08, 3.0591246e-12, -0.6624265, 0.98400533, 1.0409146e-07, 0.98400563, 0.66242623, 8.214798e-08, 1.1573228, 0.93667054)
+transform = Transform3D(-1.1862023, 8.558101e-08, 5.9254106e-08, 3.0317814e-12, -0.67521393, 0.97527504, 1.04092074e-07, 0.9752754, 0.67521375, 8.084693e-08, 1.1748579, 0.9218355)
 stiffness = 0.1
 damping = 4.0
 use_gravity = false
 forward_axis = 1
 
 [node name="RBoob" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="6" unique_id=1896097270]
-transform = Transform3D(0.4769385, 0.41495425, 1.003702, -1.0003973, -0.25895756, 0.5824273, 0.42285988, -1.0806612, 0.24583703, 0.40908417, 1.0887477, -0.94768494)
+transform = Transform3D(0.4846031, 0.41683915, 0.99923974, -1.0049418, -0.23421544, 0.585073, 0.4028983, -1.0855702, 0.25745836, 0.41221765, 1.1670206, -0.9558458)
 stiffness = 0.6
 
 [node name="LBoob" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="7" unique_id=645925894]
-transform = Transform3D(0.4767273, -0.4149505, -1.0038042, 1.0004992, -0.25901252, 0.58222795, -0.42285672, -1.0806497, 0.24589354, -0.4090711, 1.0887066, -0.9476749)
+transform = Transform3D(0.48439294, -0.41683602, -0.99934334, 1.0050454, -0.23427063, 0.5848733, -0.40289342, -1.0855598, 0.2575112, -0.41220528, 1.1669782, -0.9558373)
 stiffness = 0.6
 
 [node name="SKB1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="8" unique_id=1490642704]
-transform = Transform3D(-1.1862023, 2.1815652e-08, 1.0139808e-07, 3.8512197e-12, -1.1596566, 0.24954541, 1.0371795e-07, 0.24954446, 1.159661, 7.494159e-09, 0.013026476, 0.08572653)
+transform = Transform3D(-1.1862023, 2.1815639e-08, 1.0139808e-07, 3.856152e-12, -1.1596566, 0.24954534, 1.0371795e-07, 0.24954438, 1.159661, 7.4941315e-09, 0.049608707, 0.0857263)
 
 [node name="SKB2" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="9" unique_id=1974935631]
-transform = Transform3D(-1.1862023, -3.0879828e-09, 1.03671084e-07, 1.1834851e-12, -1.185677, -0.035303663, 1.03716715e-07, -0.035303555, 1.1856807, 9.429046e-09, -0.092131674, 0.10785691)
+transform = Transform3D(-1.1862023, -3.0880012e-09, 1.0367108e-07, 1.2003787e-12, -1.185677, -0.035303686, 1.0371671e-07, -0.035303578, 1.1856807, 9.429046e-09, -0.052819848, 0.107857175)
 
 [node name="SKF1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="10" unique_id=433327356]
-transform = Transform3D(-1.1862023, -6.779973e-09, 1.0347125e-07, 5.250968e-13, -1.1836644, -0.077554084, 1.03692955e-07, -0.07755395, 1.1836665, -9.631945e-09, 0.0130262375, -0.110173285)
+transform = Transform3D(-1.1862023, -6.779974e-09, 1.0347125e-07, 5.26027e-13, -1.1836644, -0.077554084, 1.03692955e-07, -0.07755395, 1.1836665, -9.631948e-09, 0.04960847, -0.11017331)
 
 [node name="SKL1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="11" unique_id=1264303952]
-transform = Transform3D(-1.162196, -0.10687715, -0.21201849, 0.10514185, -1.1813776, 0.019180886, -0.21288425, -5.2521766e-08, 1.1669431, -0.17866477, -0.07627493, -0.009469699)
+transform = Transform3D(-1.162196, -0.10687715, -0.21201847, 0.10514185, -1.1813776, 0.01918089, -0.21288423, -5.031229e-08, 1.1669431, -0.17866482, -0.0396927, -0.009469702)
 
 [node name="SKR1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="12" unique_id=176438490]
-transform = Transform3D(-1.162199, 0.10687353, 0.21201119, -0.10513849, -1.1813781, 0.019179633, 0.21287706, 1.3856296e-08, 1.1669445, 0.17866476, -0.07627481, -0.009469708)
+transform = Transform3D(-1.162199, 0.10687377, 0.21201116, -0.105138734, -1.1813781, 0.019179663, 0.21287708, 5.994307e-10, 1.1669445, 0.17866522, -0.03969258, -0.009469737)
 
 [node name="HRight1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="13" unique_id=1647796544]
-transform = Transform3D(-1.1407164, -0.15005392, -0.28866115, 0.1399282, -1.1764615, 0.05859564, -0.29370317, 0.022297358, 1.1490501, 0.09589555, 0.5901737, -0.031881753)
+transform = Transform3D(-1.1407164, -0.15005377, -0.28866115, 0.13992806, -1.1764615, 0.05859562, -0.29370317, 0.02229738, 1.1490501, 0.09589567, 0.6267562, -0.031881694)
 
 [node name="HRight2" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="14" unique_id=307027202]
-transform = Transform3D(-1.1348405, -0.090010054, -0.333332, 0.10499682, -1.1809157, -0.03858117, -0.32891905, -0.06641557, 1.1377503, 0.08792616, 0.5253732, -0.030697273)
+transform = Transform3D(-1.1348405, -0.09000999, -0.33333203, 0.10499676, -1.1809157, -0.03858121, -0.32891905, -0.0664156, 1.1377504, 0.08792607, 0.5646851, -0.030697376)
 
 [node name="HRight3" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="15" unique_id=666968162]
-transform = Transform3D(-1.1234586, -0.0032540923, -0.38066307, 0.071115136, -1.1670707, -0.19990689, -0.3739754, -0.21215448, 1.1055349, 0.08255213, 0.45283175, -0.03466258)
+transform = Transform3D(-1.1234586, -0.0032539708, -0.38066313, 0.07111501, -1.1670707, -0.19990693, -0.3739754, -0.21215445, 1.105535, 0.082552254, 0.4943509, -0.034662437)
 
 [node name="HLeft1" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="16" unique_id=2025935934]
-transform = Transform3D(-1.140714, 0.15005778, 0.28866884, -0.13993156, -1.176461, 0.058597535, 0.29371107, 0.022297336, 1.1490483, -0.095860146, 0.5901737, -0.031881552)
+transform = Transform3D(-1.140714, 0.15005754, 0.2886689, -0.13993134, -1.1764613, 0.058597375, 0.29371113, 0.022297231, 1.1490484, -0.09586046, 0.6267562, -0.03188171)
 
 [node name="HLeft2" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="17" unique_id=1367438764]
-transform = Transform3D(-1.1668016, 0.030126011, 0.21152292, -0.042215694, -1.1837065, -0.06428131, 0.2094454, -0.07075784, 1.1654189, -0.08789012, 0.5253732, -0.030697297)
+transform = Transform3D(-1.1668016, 0.030125706, 0.21152298, -0.042215407, -1.1837068, -0.064281456, 0.20944549, -0.07075796, 1.1654189, -0.08789044, 0.5646851, -0.030697294)
 
 [node name="HLeft3" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="18" unique_id=1560518597]
-transform = Transform3D(-1.1583579, -0.056545474, 0.24916922, 0.009511503, -1.1655298, -0.22028293, 0.2553277, -0.21311416, 1.1386242, -0.086091615, 0.45266175, -0.03492205)
+transform = Transform3D(-1.1583579, -0.056545775, 0.24916923, 0.009511793, -1.1655301, -0.22028293, 0.25532776, -0.21311414, 1.1386242, -0.08609185, 0.49418092, -0.034921974)
 
 [node name="HFront" parent="Visuals/ayano/Ayano/Ayano_arm/Skeleton3D" index="19" unique_id=1283359222]
-transform = Transform3D(-1.1862023, 1.1853718e-08, 1.0351582e-07, -4.31755e-12, -1.1785063, 0.13490267, 1.041923e-07, 0.13490267, 1.1785063, -1.0920439e-08, 0.66183066, -0.12448283)
+transform = Transform3D(-1.1862023, 1.185376e-08, 1.0351582e-07, -4.3457386e-12, -1.1785063, 0.13490282, 1.0419231e-07, 0.13490282, 1.1785063, -1.09204015e-08, 0.6984129, -0.12448295)
 
 [node name="YawPivot" type="Node3D" parent="." unique_id=866912853]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.542, 0)
@@ -2306,6 +2589,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/UpperBodyLayer/blend_amount = 0.0
 parameters/Movement/blend_position = 0.5
 parameters/AimFilter/blend_amount = 1.0
+parameters/EmoteBlendSpace/blend_position = 0.0
 
 [node name="Control" type="Control" parent="." unique_id=1215280167]
 layout_mode = 3
@@ -2332,5 +2616,23 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(20, 20)
 mouse_filter = 2
+
+[node name="RadialMenu" type="Control" parent="Control" unique_id=750416463 node_paths=PackedStringArray("player")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_xcxpm")
+player = NodePath("../..")
+radius = 125.0
+
+[node name="EmoteMenu" type="Panel" parent="Control/RadialMenu" unique_id=1453070692]
+material = SubResource("ShaderMaterial_xcxpm")
+layout_mode = 1
+offset_right = 194.0
+offset_bottom = 194.0
+mouse_filter = 2
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1582065770]
+script = ExtResource("8_6p76l")
 
 [editable path="Visuals/ayano"]
