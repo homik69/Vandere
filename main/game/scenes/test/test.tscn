@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://d0ckyfipotjxy" path="res://main/game/scenes/player/player.tscn" id="1_24ese"]
 [ext_resource type="Shader" uid="uid://l4u0lavawxtk" path="res://main/game/scenes/test/skai.gdshader" id="2_dg67u"]
-[ext_resource type="PackedScene" uid="uid://ba5yqm14e80mx" path="res://godette_plush/godette_plush.tscn" id="3_knyqu"]
 [ext_resource type="PackedScene" uid="uid://fohmeogugrb" path="res://main/resources/models/gman/gman.glb" id="4_hkff6"]
 [ext_resource type="Script" uid="uid://c5vodqtbovxji" path="res://main/game/scripts/components/combat/enemy.gd" id="4_ngo55"]
 [ext_resource type="Script" uid="uid://c6dnyc6lxxwre" path="res://main/game/scripts/components/combat/health_component.gd" id="6_dd6ky"]
@@ -82,11 +81,6 @@ use_collision = true
 collision_layer = 15
 collision_mask = 8
 size = Vector3(2.4667358, 0.89697266, 1.6679688)
-
-[node name="GodettePlush" parent="." unique_id=1521205680 instance=ExtResource("3_knyqu")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.04721737, 0.87610346, -12.544806)
-collision_layer = 2
-collision_mask = 9
 
 [node name="Gman" type="RigidBody3D" parent="." unique_id=1763953272 node_paths=PackedStringArray("health_component")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2050796, 0.48600227, -7.9038887)
