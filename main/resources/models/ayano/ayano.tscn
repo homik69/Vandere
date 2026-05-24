@@ -7,6 +7,8 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qgyd"]
 resource_name = "Blazer"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("1_s3h78")
 roughness = 0.4265795
 metadata/_gltf_primary_texture_coord = 0
@@ -14,6 +16,8 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfnlo"]
 resource_name = "Hands"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("1_s3h78")
 roughness = 0.4265795
 metadata/_gltf_primary_texture_coord = 0
@@ -21,6 +25,8 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqcip"]
 resource_name = "Head"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("2_dxnkr")
 roughness = 0.4265795
 metadata/_gltf_primary_texture_coord = 0
@@ -28,6 +34,8 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mn4tf"]
 resource_name = "Hair"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_color = Color(0.0899991, 0.0899991, 0.0899991, 1)
 roughness = 0.4265795
 
@@ -2328,7 +2336,7 @@ settings/0/enable_all_child_collisions = true
 settings/0/exclude_collision_count = 0
 
 [node name="HBack3" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1764031419]
-transform = Transform3D(-1.1862023, -3.372924e-05, -7.089149e-05, 3.391571e-05, -1.1861978, -0.0031218894, -7.080249e-05, -0.0031218918, 1.1861978, 1.796775e-08, 0.64108264, 0.20493208)
+transform = Transform3D(-1.1862023, -3.3668628e-05, -7.089127e-05, 3.3854736e-05, -1.1861979, -0.003115846, -7.0802605e-05, -0.003115848, 1.186198, 1.7967814e-08, 0.64108264, 0.20493346)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair back 3"
@@ -2339,7 +2347,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="HBack4" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1164311112]
-transform = Transform3D(-1.1862023, 1.6671465e-05, 3.207237e-06, -1.6860571e-05, -1.1830609, -0.086269125, 1.9862755e-06, -0.086269125, 1.1830608, -2.9192645e-06, 0.5377034, 0.20466077)
+transform = Transform3D(-1.1862023, 1.6699893e-05, 3.2130351e-06, -1.688934e-05, -1.1830611, -0.086265974, 1.990036e-06, -0.086265974, 1.1830611, -2.9163118e-06, 0.5377034, 0.20466094)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair back 4"
@@ -2349,7 +2357,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="HBack2" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=998469397]
-transform = Transform3D(-1.1862023, 2.5550134e-08, 1.0102279e-07, 2.1942225e-12, -1.149986, 0.29087403, 1.04203714e-07, 0.290874, 1.1499861, 1.5948174e-08, 0.73197675, 0.18194264)
+transform = Transform3D(-1.1862023, 2.5550237e-08, 1.010228e-07, 2.024443e-12, -1.1499859, 0.29087314, 1.04203785e-07, 0.2908731, 1.149986, 1.5948345e-08, 0.73197675, 0.18194121)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair back 2"
@@ -2378,7 +2386,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="LBoob" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=645925894]
-transform = Transform3D(0.47941148, -0.41563314, -1.0022422, 1.0021455, -0.25034884, 0.5831857, -0.41586626, -1.0824277, 0.2499615, -0.4102772, 1.1417642, -0.9508161)
+transform = Transform3D(0.47941148, -0.41563314, -1.0022422, 1.0021455, -0.25034884, 0.5831857, -0.41586626, -1.0824277, 0.2499615, -0.4102772, 1.1417642, -0.95081604)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "boob left "
@@ -2387,7 +2395,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="SKB1" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1490642704]
-transform = Transform3D(-1.1862023, 2.1815671e-08, 1.0139808e-07, 3.8487577e-12, -1.1596566, 0.24954562, 1.0371795e-07, 0.24954467, 1.159661, 7.494176e-09, 0.051047206, 0.08572667)
+transform = Transform3D(-1.1862023, 2.1815666e-08, 1.0139808e-07, 3.848935e-12, -1.1596566, 0.24954557, 1.0371795e-07, 0.24954462, 1.159661, 7.494176e-09, 0.051047206, 0.08572667)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "skirt back 1"
@@ -2399,7 +2407,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="SKB2" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1974935631]
-transform = Transform3D(-1.1862023, -3.087754e-09, 1.03671084e-07, 1.186042e-12, -1.185677, -0.035301022, 1.03716715e-07, -0.035300914, 1.1856807, 9.42908e-09, -0.05179572, 0.10785738)
+transform = Transform3D(-1.1862023, -3.0877585e-09, 1.03671084e-07, 1.1865074e-12, -1.185677, -0.035301067, 1.03716715e-07, -0.03530096, 1.1856807, 9.42908e-09, -0.05179572, 0.10785738)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "skirt back 2"
@@ -2411,7 +2419,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="SKF1" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=433327356]
-transform = Transform3D(-1.1862023, -6.7799415e-09, 1.0347125e-07, 4.9297936e-13, -1.1836644, -0.07755409, 1.03692955e-07, -0.07755396, 1.1836665, -9.631903e-09, 0.051047087, -0.11017343)
+transform = Transform3D(-1.1862023, -6.779942e-09, 1.0347125e-07, 4.930194e-13, -1.1836644, -0.07755409, 1.03692955e-07, -0.07755396, 1.1836665, -9.631903e-09, 0.051047087, -0.11017343)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "skirt front 1"
@@ -2480,7 +2488,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="HLeft1" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=2025935934]
-transform = Transform3D(-1.140714, 0.1500584, 0.28866878, -0.13993214, -1.176461, 0.058597784, 0.2937111, 0.022297435, 1.1490483, -0.09586011, 0.6281948, -0.031881534)
+transform = Transform3D(-1.140714, 0.15005821, 0.28866878, -0.13993196, -1.176461, 0.058597706, 0.29371107, 0.022297401, 1.1490483, -0.09586011, 0.6281948, -0.031881534)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair left 1"
@@ -2491,7 +2499,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="HLeft2" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1367438764]
-transform = Transform3D(-1.1668016, 0.030126192, 0.21152298, -0.04221593, -1.1837066, -0.06428158, 0.20944545, -0.07075817, 1.1654189, -0.08789058, 0.5657091, -0.030697342)
+transform = Transform3D(-1.1668016, 0.030126156, 0.21152301, -0.042215932, -1.1837063, -0.06428181, 0.20944548, -0.07075839, 1.1654186, -0.08789058, 0.5657091, -0.030697342)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair left 2"
@@ -2502,7 +2510,7 @@ forward_axis = 1
 metadata/_custom_type_script = "uid://boxkxxedk87f8"
 
 [node name="HLeft3" type="Node3D" parent="Ayano/Ayano_arm/Skeleton3D" unique_id=1560518597]
-transform = Transform3D(-1.1583579, -0.056545213, 0.24916929, 0.00951127, -1.1655298, -0.22028269, 0.25532773, -0.213114, 1.1386242, -0.08609142, 0.49503636, -0.034922056)
+transform = Transform3D(-1.1583579, -0.0565453, 0.24916926, 0.009511267, -1.1655298, -0.2202831, 0.25532776, -0.2131144, 1.138624, -0.08609142, 0.49503636, -0.034922056)
 top_level = true
 script = ExtResource("3_dxnkr")
 bone_name = "head hair left 3"

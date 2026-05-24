@@ -26,6 +26,7 @@ amount = 53
 one_shot = true
 explosiveness = 1.0
 trail_enabled = true
+trail_lifetime = 2.15
 process_material = SubResource("ParticleProcessMaterial_7dpca")
 draw_pass_1 = SubResource("SphereMesh_213hr")
 script = ExtResource("1_5vc00")

@@ -46,8 +46,13 @@ enum WeaponMode { HITSCAN, PROJECTILE }
 
 var emote_manager: EmoteManager
 var last_target_rotation: float = 0.0
-var current_blend_amount: float = 0.0
-var current_aim_blend: float = 0.0
+@export var current_blend_amount: float = 0.0
+@export var current_aim_blend: float = 0.0
+@export var current_air_blend: float = 0.0
+
+@export var emote_blend_position: float = 0.0
+@export var emote_layer_weight: float = 0.0
+
 var target_zoom: float = 3.5
 var fire_cooldown_timer: float = 0.0
 var sprinting := false
@@ -62,6 +67,15 @@ var double_jump_triggered := false
 @onready var crosshair: CanvasItem = get_node_or_null("Control/Crosshair") as CanvasItem
 
 func _ready():
+	var peer_id = str(name).to_int()
+	if peer_id > 0:
+		set_multiplayer_authority(peer_id)
+	
+	if not is_multiplayer_authority():
+		if camera:
+			camera.current = false
+		return
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	emote_manager = EmoteManager.new(self)
@@ -75,6 +89,8 @@ func _ready():
 		animation_tree.active = true
 
 func _unhandled_input(event):
+	if not is_multiplayer_authority():
+		return
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if yaw_pivot:
 			yaw_pivot.rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
@@ -92,6 +108,8 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
+	if not is_multiplayer_authority():
+		return
 	handle_gravity(delta)
 	handle_cooldowns(delta)
 
@@ -109,6 +127,15 @@ func _physics_process(delta):
 
 	move_and_slide()
 	handle_animations(aiming, delta)
+
+func _process(_delta):
+	if not is_multiplayer_authority():
+		if animation_tree:
+			animation_tree.set("parameters/Movement/blend_position", current_blend_amount)
+			animation_tree.set("parameters/AimFilter/blend_amount", current_aim_blend)
+			animation_tree.set("parameters/AirBlend/blend_amount", current_air_blend)
+			animation_tree.set("parameters/EmoteBlendSpace/blend_position", emote_blend_position)
+			animation_tree.set("parameters/UpperBodyLayer/blend_amount", emote_layer_weight)
 
 func handle_gravity(delta: float):
 	if not is_on_floor():
@@ -256,17 +283,6 @@ func handle_animations(is_aiming: bool, delta: float):
 	current_aim_blend = move_toward(current_aim_blend, target_aim, aim_blend_speed * delta)
 	animation_tree.set("parameters/AimFilter/blend_amount", current_aim_blend)
 
-	animation_tree.set("parameters/conditions/is_on_floor", is_on_floor())
-	animation_tree.set("parameters/conditions/is_in_air", not is_on_floor())
-
-	if jump_triggered:
-		animation_tree.set("parameters/conditions/jump", true)
-		jump_triggered = false
-	else:
-		animation_tree.set("parameters/conditions/jump", false)
-
-	if double_jump_triggered:
-		animation_tree.set("parameters/conditions/double_jump", true)
-		double_jump_triggered = false
-	else:
-		animation_tree.set("parameters/conditions/double_jump", false)
+	var target_air := 0.0 if is_on_floor() else 1.0
+	current_air_blend = move_toward(current_air_blend, target_air, anim_blend_speed * delta)
+	animation_tree.set("parameters/AirBlend/blend_amount", current_air_blend)

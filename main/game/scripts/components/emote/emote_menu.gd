@@ -27,11 +27,15 @@ func _ready():
 	_center_background_panel()
 
 func _process(_delta):
+	if player and not player.is_multiplayer_authority():
+		return
 	if not is_open:
 		return
 	_update_selection()
 
 func _unhandled_input(event):
+	if player and not player.is_multiplayer_authority():
+		return
 	if event.is_action_pressed("emote_menu"):
 		_build_menu()
 		_open()
@@ -133,6 +137,9 @@ func _update_selection():
 		angle += 2 * PI
 		
 	var count = options.size()
+	if count == 0:
+		return
+		
 	var step = 2 * PI / count
 	var new_selection = int(round(angle / step)) % count
 	
@@ -183,7 +190,7 @@ func _animate_shader_angle(active: bool, target_angle: float):
 	)
 
 func _process_shader_tween():
-	if menu_material and shader_tween && shader_tween.is_valid():
+	if menu_material and shader_tween and shader_tween.is_valid():
 		menu_material.set_shader_parameter("float_angle", current_shader_angle)
 
 func _notification(what):

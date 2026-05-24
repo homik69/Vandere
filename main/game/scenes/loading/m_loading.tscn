@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c4f3s813pktgo"]
+
+[ext_resource type="Shader" uid="uid://dgi8rccarehll" path="res://main/game/shaders/utwaves.gdshader" id="1_b0h7w"]
+[ext_resource type="Script" uid="uid://b47b30cp0mfnv" path="res://main/game/scripts/loading/m_loading.gd" id="1_v6daq"]
+[ext_resource type="Shader" uid="uid://pltqsfheb2nj" path="res://main/game/shaders/displacement.gdshader" id="2_v6daq"]
+[ext_resource type="Texture2D" uid="uid://yo6qtj8u1edt" path="res://icon.svg" id="3_1edah"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4jlpc"]
+shader = ExtResource("1_b0h7w")
+shader_parameter/speed = 2.005
+shader_parameter/height_limit = 0.25
+shader_parameter/bar_height = 0.765
+shader_parameter/color_speed = 0.76
+shader_parameter/alpha = 1.0
+shader_parameter/follow_strength = 2.39
+shader_parameter/fade_strength = 2.0
+shader_parameter/use_rgb = false
+shader_parameter/color1 = Color(0.852963, 0.27109292, 0.63300705, 1)
+shader_parameter/color2 = Color(0.9483537, 0.7696462, 0.8465809, 1)
+shader_parameter/color3 = Color(0.52928233, 0.16945708, 0.44371936, 1)
+shader_parameter/color4 = Color(0.99835294, 0.9425348, 0.9513119, 1)
+shader_parameter/color5 = Color(0.9569146, 0.4145999, 0.5507983, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sshlj"]
+shader = ExtResource("2_v6daq")
+shader_parameter/interval = 0.215
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 12.52
+shader_parameter/intensityY = 13.505
+shader_parameter/seed = 42.0
+
+[node name="MLoading" type="Control" unique_id=1004079781]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v6daq")
+scene_path = "res://main/game/scenes/test/test.tscn"
+
+[node name="Panel" type="Panel" parent="." unique_id=363802155]
+material = SubResource("ShaderMaterial_4jlpc")
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0030864198
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = 650.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1629795142]
+material = SubResource("ShaderMaterial_sshlj")
+position = Vector2(1051, 593)
+scale = Vector2(1.0937501, 0.489361)
+texture = ExtResource("3_1edah")
+
+[node name="Progress" type="Label" parent="." unique_id=1983668845]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+text = "2137%"
